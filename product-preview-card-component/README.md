@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/prantiknoor/frontend-mentor-challenges/tree/master/product-preview-card-component)
-- Live Site URL: [Vercel](https://frontend-mentor-challenges-eight-rho.vercel.app/)
+- Live Site URL: [Vercel](https://product-preview-card-component-rho.vercel.app)
 
 ## My process
 
