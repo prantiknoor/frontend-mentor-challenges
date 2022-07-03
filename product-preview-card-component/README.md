@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/prantiknoor/frontend-mentor-challenges/tree/master)
-- Live Site URL: [ToDo](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/prantiknoor/frontend-mentor-challenges/tree/master/product-preview-card-component)
+- Live Site URL: [Vercel](https://frontend-mentor-challenges-eight-rho.vercel.app/)
 
 ## My process
 
