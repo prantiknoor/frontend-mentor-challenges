@@ -117,6 +117,10 @@ p {
     content: url("./images/image-product-desktop.jpg");
     border-radius: var(--border-radius-product-card) 0 0
       var(--border-radius-product-card);
-    width: 50%;
+    flex: 1;
+  }
+
+  .content {
+    flex: 1;
   }
 }
