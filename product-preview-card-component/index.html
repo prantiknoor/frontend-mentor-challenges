@@ -26,11 +26,19 @@
   <body>
     <main>
       <div class="container">
-        <img
-          src="./images/image-product-mobile.jpg"
-          alt="A image of perfume"
-          class="product-image"
-        />
+        <div class="product-image-container">
+          <picture>
+            <source
+              media="(min-width: 800px)"
+              srcset="./images/image-product-desktop.jpg"
+            />
+            <img
+              src="./images/image-product-mobile.jpg"
+              alt="A image of perfume"
+              class="product-image"
+            />
+          </picture>
+        </div>
         <div class="content">
           <p class="top-text">perfume</p>
           <h1 class="title">gabrielle essence eau de parfum</h1>
@@ -38,11 +46,13 @@
             A floral, solar and voluptous interpretation composed by Olivier
             Polge, Perfumer-Creator for the House of CHANEL.
           </p>
-
           <p class="current-price">
-            $149.99 <span class="previous-price">$169.99</span>
+            <span class="sr-only">Current Price is</span> $149.99
+            <span class="previous-price">
+              <span class="sr-only">& previous price was</span> $169.99</span
+            >
           </p>
-          <button id="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart">Add to Cart</button>
         </div>
       </div>
     </main>
