@@ -26,13 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="./screenshots/ss-desktop.png" width="76%" align="left"> <img src="./screenshots/ss-mobile.png" width="23%" align="right">
+<img src="./screenshots/ss-desktop.png" width="75%"> <img src="./screenshots/ss-mobile.png" width="23%">
 
 
 ### Links
 
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Solution URL: [GitHub](https://github.com/prantiknoor/frontend-mentor-challenges/tree/master/nft-preview-card-component-main)
+- Live Site URL: [Vercel](https://nft-preview-card-component-prantiknoor.vercel.app)
 
 ## My process
 
