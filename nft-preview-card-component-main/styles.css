@@ -23,9 +23,10 @@ body {
 }
 
 main {
-  height: calc(100vh - 40px);
-  display: grid;
-  align-content: center;
+  height: calc(100vh - 50px);
+  min-height: 660px;
+  display: flex;
+  align-items: center;
 }
 
 p {
@@ -37,6 +38,7 @@ p {
   width: 320px;
   background-color: var(--color-card-background);
   padding: 25px;
+  margin: 20px auto 5px auto;
   border-radius: var(--border-radius);
 	transition-duration: .6s;
 }
@@ -131,6 +133,12 @@ hr {
 }
 
 /* footer */
+
+footer {
+  height: 50px;
+  display: grid;
+  align-items: center;
+}
 
 .attribution {
   color: var(--color-primary-1);
