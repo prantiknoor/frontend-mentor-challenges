@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;400&display=swap");
+
+:root {
+  --color-primary-1: hsl(215, 51%, 70%);
+  --color-primary-2: hsl(178, 100%, 50%);
+  --color-background: hsl(217, 54%, 11%);
+  --color-card-background: hsl(216, 50%, 16%);
+  --color-line: hsl(215, 32%, 27%);
+  --color-heading: hsl(0, 0%, 100%);
+
+  --size-mobile: 375px;
+  --size-desktop: 1440px;
+
+  --font-size-p: 18px;
+
+  --border-radius: 12px;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  background-color: var(--color-background);
+}
+
+main {
+  height: calc(100vh - 40px);
+  display: grid;
+  align-content: center;
+}
+
+p {
+  font-size: var(--font-size-p);
+}
+
+.nft-card {
+  margin: auto;
+  width: 320px;
+  background-color: var(--color-card-background);
+  padding: 25px;
+  border-radius: var(--border-radius);
+	transition-duration: .6s;
+}
+
+.nft-card:hover {
+	cursor: pointer;
+	box-shadow: 4px 4px 12px rgba(0, 0, 0, .3);
+	transform: scale(1.01);
+}
+
+.nft-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.title {
+  color: var(--color-heading);
+}
+
+.subtitle {
+  color: var(--color-primary-1);
+  font-weight: 200;
+  margin: 12px 0;
+}
+
+.price {
+  color: var(--color-primary-2);
+  float: left;
+}
+
+.deadline {
+  color: var(--color-primary-1);
+  float: right;
+}
+
+.price,
+.deadline {
+  margin: 8px 0;
+}
+
+.price::before {
+  content: url("./images/icon-ethereum.svg");
+}
+
+.deadline::before {
+  content: url("./images/icon-clock.svg");
+}
+
+.price::before,
+.deadline::before {
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--color-line);
+  width: 100%;
+  position: relative;
+  top: 12px;
+}
+
+.creator {
+  display: flex;
+  margin-top: 30px;
+  height: 35px;
+  align-items: center;
+}
+
+.avatar {
+  height: 100%;
+  margin-right: 16px;
+  padding: 1px;
+  border-radius: 50%;
+  background-color: var(--color-heading);
+}
+
+.avatar img {
+  height: 100%;
+}
+
+.creator > .name {
+  color: var(--color-primary-1);
+  font-weight: 200;
+  font-size: 1.1rem;
+}
+
+.creator > .name b {
+  color: var(--color-heading);
+  font-weight: 400;
+}
+
+/* footer */
+
+.attribution {
+  color: var(--color-primary-1);
+  font-weight: 300;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: inherit;
+  font-weight: 500;
+}
