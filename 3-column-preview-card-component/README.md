@@ -27,15 +27,14 @@ Users should be able to:
 
 ### Screenshot
 
-<img src="screenshots/ss-mobile-part1.png" width="49.3%"/> 
-<img src="screenshots/ss-mobile-part2.png" width="49.3%"/>
+<img src="screenshots/ss-mobile-part1.png" width="49.5%"/> <img src="screenshots/ss-mobile-part2.png" width="49.5%"/>
 <img src="screenshots/ss-desktop.png">
 
 
-<!-- ### Links
+### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+- Solution URL: [GitHub](https://github.com/prantiknoor/frontend-mentor-challenges/tree/master/3-column-preview-card-component)
+- Live Site URL: [Vercel](https://3-column-preview-card-component-prantiknoor.vercel.app)
 
 ## My process
 
@@ -51,7 +50,7 @@ Users should be able to:
 
 By doing this project, I learned more about Responsive design.
 
-I used `nth-of-type` seoudo selector
+I used `nth-of-type` pseudo selector
 
 ```css
 .card > .column:nth-of-type(1) {
