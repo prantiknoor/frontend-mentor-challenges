@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Rating state start -->
+      <div class="card card--rating-state" >
+        <div class="card__icon"><img src="./images/icon-star.svg" alt="star icon"></div>
+        <h1 class="card__title">How did we do?</h1>
+        <p class="card__subtitle">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="card__rating_bar">
+          <div class="rating_bar__el rating_bar__el--active">1</div>
+          <div class="rating_bar__el rating_bar__el--active">2</div>
+          <div class="rating_bar__el rating_bar__el--active">3</div>
+          <div class="rating_bar__el rating_bar__el--active">4</div>
+          <div class="rating_bar__el rating_bar__el--active">5</div>
+        </div>
+        <button id="button_submit" class="card__button card__button--active">Submit</button>
+      </div>
+      <!-- Rating state end -->
+
+      <!-- Thank you state start -->
+      <div class="card" hidden>
+        <div class="card__icon--thank-you"><img src="./images/illustration-thank-you.svg" alt="Thank you icon"></div>
+        <div id="ratingInfo" class="card__selection">You selected 4 out of 5</div>
+        <h1 class="card__title">Thank you!</h1>
+        <p class="card__subtitle card__subtitle--thank-you">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <!-- Thank you state end -->
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a target="_blank" href="https://github.com/prantiknoor">Prantik</a>.
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+
+  </body>
+</html>
