@@ -37,14 +37,14 @@
           <div class="rating_bar__el rating_bar__el--active">4</div>
           <div class="rating_bar__el rating_bar__el--active">5</div>
         </div>
-        <button class="card__button card__button--active">Submit</button>
+        <button id="button_submit" class="card__button card__button--active">Submit</button>
       </div>
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
       <div class="card" hidden>
         <div class="card__icon--thank-you"><img src="./images/illustration-thank-you.svg" alt="Thank you icon"></div>
-        <div class="card__selection">You selected 4 out of 5</div>
+        <div id="ratingInfo" class="card__selection">You selected 4 out of 5</div>
         <h1 class="card__title">Thank you!</h1>
         <p class="card__subtitle card__subtitle--thank-you">
           We appreciate you taking the time to give a rating. If you ever need
@@ -62,5 +62,8 @@
         >. Coded by <a target="_blank" href="https://github.com/prantiknoor">Prantik</a>.
       </div>
     </footer>
+
+    <script type="text/javascript" src="script.js"></script>
+
   </body>
 </html>
