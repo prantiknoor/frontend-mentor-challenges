@@ -1,0 +1,143 @@
+:root {
+  --color-primary: hsl(25, 97%, 53%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(217, 12%, 63%);
+  --color-medium-gray: hsl(216, 12%, 54%);
+  --color-dark-blue: hsl(213, 19%, 18%);
+  --color-dark-blue-plus: hsl(213, 19%, 12%);
+  --color-dark-blue-light: hsl(213, 19%, 22%);
+  --color-very-dark-blue: hsl(216, 12%, 8%);
+
+  --font-size-body: 15px;
+
+  --font-overpass: "Overpass", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-overpass);
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-very-dark-blue);
+  color: var(--color-white);
+}
+
+main {
+  height: calc(100vh - 2rem);
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}
+
+.card {
+  max-width: 20rem;
+  background: linear-gradient(
+    var(--color-dark-blue),
+    var(--color-dark-blue-plus)
+  );
+  padding: 2rem 1.7rem;
+  border-radius: 1rem;
+}
+
+.card__icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding: 0.7rem;
+  border-radius: 50%;
+  background-color: var(--color-dark-blue-light);
+}
+
+.card__title {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.card__subtitle {
+  color: var(--color-medium-gray);
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.card__rating_bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating_bar__el {
+  font-size: 0.8rem;
+  padding: 1.2rem;
+
+  height: 1rem;
+  width: 1rem;
+  display: grid;
+  place-content: center;
+  background-color: var(--color-dark-blue-light);
+  color: var(--color-medium-gray);
+  border-radius: 50%;
+}
+
+.rating_bar__el--active:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.rating_bar__el--selected {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.card__button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 2rem;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transition: all 0.4s ease;
+}
+
+.card__button--active:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+footer {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.attribution {
+    font-size: 0.8rem;
+    color: var(--color-medium-gray);
+}
+
+.attribution a {
+    color: inherit;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 375px) {
+  .card {
+    max-width: 22rem;
+  }
+
+  .card__subtitle {
+    font-size: 0.92rem;
+  }
+
+  .rating_bar__el {
+    font-size: 0.9rem;
+    padding: 1.35rem;
+  }
+}
