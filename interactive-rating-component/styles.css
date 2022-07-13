@@ -127,6 +127,30 @@ footer {
     font-weight: bold;
 }
 
+/* Thank you state */
+.card--thank-you-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card__icon--thank-you {
+    margin: 2rem 0;
+}
+
+.card__selection {
+    color: var(--color-primary);
+    background-color: var(--color-dark-blue-light);
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.card__subtitle--thank-you {
+    text-align: center;
+    margin: 0;
+}
+
 @media screen and (min-width: 375px) {
   .card {
     max-width: 22rem;
