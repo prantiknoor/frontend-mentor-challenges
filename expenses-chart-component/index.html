@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link src="./styles.css" type="text/css" rel="stylesheet">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-  My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <header class="header">
+      <span class="header__label">My balance</span>
+      <span class="header__value">$921.48</span>
+      <div class="header_logo">
+        <img src="./images/logo.svg" alt="Logo">
+      </div>
+    </header>
+    <div class="card">
+      <h1 class="card__title">Spending - Last 7 days</h1>
+      <div class="chart">
+        <div class="chart__bar"></div>
+        <div class="chart__bar"></div>
+        <div class="chart__bar"></div>
+        <div class="chart__bar"></div>
+        <div class="chart__bar"></div>
+      </div>
+      <hr class="divider">
+      <div class="summury">
+        <span class="summury__label">Total this month</span>
+        <span class="summury__value">$478.33
+      </div>
+      <span class="summury__difference">+2.4% <spna class="label"></spna>from last month</span>
+    </div>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/prantiknoor">Prantik</a>.
+    </div>
+  </footer>
 </body>
+
 </html>
