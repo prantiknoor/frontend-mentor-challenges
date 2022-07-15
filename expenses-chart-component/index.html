@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Expenses chart component</title>
 
-  <link src="./styles.css" type="text/css" rel="stylesheet">
+  <link href="styles.css" type="text/css" rel="stylesheet">
 
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,25 +22,27 @@
     <header class="header">
       <span class="header__label">My balance</span>
       <span class="header__value">$921.48</span>
-      <div class="header_logo">
+      <div class="header__logo">
         <img src="./images/logo.svg" alt="Logo">
       </div>
     </header>
     <div class="card">
       <h1 class="card__title">Spending - Last 7 days</h1>
       <div class="chart">
-        <div class="chart__bar"></div>
-        <div class="chart__bar"></div>
-        <div class="chart__bar"></div>
-        <div class="chart__bar"></div>
-        <div class="chart__bar"></div>
+        <div class="chart__bar"><div class="tooltip">$59.3</div></div>
+        <div class="chart__bar"><div class="tooltip"></div></div>
+        <div class="chart__bar chart__bar--highlight"><div class="tooltip">$39.3</div></div>
+        <div class="chart__bar"><div class="tooltip"></div></div>
+        <div class="chart__bar"><div class="tooltip"></div></div>
+        <div class="chart__bar"><div class="tooltip"></div></div>
+        <div class="chart__bar"><div class="tooltip"></div></div>
       </div>
       <hr class="divider">
       <div class="summury">
         <span class="summury__label">Total this month</span>
         <span class="summury__value">$478.33
+        <span class="summury__diff"><span class="diff">+2.4%</span>from last month</span>
       </div>
-      <span class="summury__difference">+2.4% <spna class="label"></spna>from last month</span>
     </div>
     </div>
   </main>
