@@ -112,6 +112,7 @@ main {
 
 .chart__bar--highlight {
     background-color: var(--color-cyan);
+    bottom: 0;
 }
 
 .chart__bar:hover {
@@ -146,8 +147,7 @@ main {
     opacity: 1;
 }
 
-.chart__bar::after {
-    content: 'fri';
+.chart__bar__date {
     position: absolute;
     text-align: center;
     width: 100%;
