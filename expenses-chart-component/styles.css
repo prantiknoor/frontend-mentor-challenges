@@ -17,7 +17,7 @@
   --border-radius-card: 0.8rem;
 
   /* size */
-  --card-width: 340px;
+  --card-width: 360px;
 
   /* padding, margin */
   --padding-card: 1.2rem;
@@ -44,6 +44,7 @@ main {
   justify-content: center;
   align-items: center;
   row-gap: 1rem;
+  min-width: 340px;
 }
 
 .header {
@@ -95,10 +96,11 @@ main {
 }
 
 .chart {
-    height: 8rem;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
     margin: 2.6rem 0 3rem 0;
+    position: relative;
 }
 
 .chart__bar {
@@ -112,7 +114,6 @@ main {
 
 .chart__bar--highlight {
     background-color: var(--color-cyan);
-    bottom: 0;
 }
 
 .chart__bar:hover {
@@ -162,29 +163,30 @@ main {
 }
 
 .summury {
-    position: relative;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .summury__label {
     font-size: 1rem;
-    line-height: 2rem;
     color: var(--color-medium-brown);
     display: block;
 }
 
 .summury__value {
-    line-height: 1.8rem;
     font-size: 1.6rem;
     font-weight: bold;
+    grid-column: 1/2;
+    align-self: end;
 }
 
 .summury__diff {
-    position: absolute;
     font-size: 1rem;
     color: var(--color-medium-brown);
     font-weight: 400;
-    right: 0;
-    bottom: 0;
+    text-align: right;
+    grid-column: 2/3;
 }
 
 .summury__diff .diff {
@@ -208,4 +210,10 @@ footer {
 .attribution a {
     color: inherit;
     font-weight: bold;
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --card-width: 320px;
+    }
 }
