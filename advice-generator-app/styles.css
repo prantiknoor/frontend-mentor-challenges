@@ -3,7 +3,7 @@
     --color-primary: hsl(193, 38%, 86%);
     --color-secondary: hsl(150, 100%, 66%);
     --color-background: hsl(218, 23%, 16%);
-    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --color-dark-grayish-blue: hsl(217, 19%, 24%);
     --color-bg-card: hsl(217, 19%, 38%);
 
     /* font-sizes */
@@ -11,4 +11,39 @@
 
     /* fonts */
     --font-primary: 'Manrope', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    background-color: var(--color-background);
+}
+
+main {
+    height: calc(100vh - 2rem);
+    padding: 1rem;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+}
+
+/* card style */
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg-card);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+.attribution {
+    font-size: 0.8rem;
+}
+.attribution a {
+    color: inherit;
 }
