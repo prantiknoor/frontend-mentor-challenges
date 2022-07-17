@@ -3,11 +3,11 @@
     --color-primary: hsl(193, 38%, 86%);
     --color-secondary: hsl(150, 100%, 66%);
     --color-background: hsl(218, 23%, 16%);
-    --color-dark-grayish-blue: hsl(217, 19%, 24%);
-    --color-bg-card: hsl(217, 19%, 38%);
+    --color-bg-card: hsl(217, 19%, 24%);
+    --color-dark-grayish-blue: hsl(217, 19%, 38%);
 
     /* font-sizes */
-    --font-size-quote: 28px;
+    --font-size-quote: 1.5rem;
 
     /* fonts */
     --font-primary: 'Manrope', sans-serif;
@@ -31,9 +31,60 @@ main {
 
 /* card style */
 .card {
+    max-width: 17rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: var(--color-bg-card);
+    padding: 1.6rem 1.6rem 0 1.6rem;
+    border-radius: 0.6rem;
+}
+
+.card__advice-id {
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    margin: .6rem 0;
+}
+
+.card__quote {
+    text-align: center;
+    font-size: var(--font-size-quote);
+    margin: 1rem 0 1.8rem 0;
+}
+
+.card__quote::before, .card__quote::after {
+    content: '"';
+}
+
+.card__divider img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card__dice-button {
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 50%;
+    padding: 0.8rem;
+    transform: translateY(50%);
+}
+
+.card__dice-button img {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.75);
+}
+
+.card__dice-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1.2rem var(--color-secondary);
+}
+
+.card__dice-button--rotate img {
+    animation: rotate-dice 3s ease infinite;
 }
 
 footer {
@@ -46,4 +97,26 @@ footer {
 }
 .attribution a {
     color: inherit;
+}
+
+@keyframes rotate-dice {
+    0% {
+        transform: rotate(0) scale(0.75);
+    }
+    50% {
+        transform: rotate(360deg) scale(0.9);;
+    }
+    100% {
+        transform: rotate(0) scale(0.75);
+    }
+}
+
+@media screen and (min-width: 440px) {
+    :root {
+        --font-size-quote: 1.8rem;
+    }
+
+    .card {
+        min-width: 22rem;
+    }
 }
