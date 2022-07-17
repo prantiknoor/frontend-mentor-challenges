@@ -14,6 +14,7 @@ response = fetchData("./data.json");
 
 console.log(response.data);
 
+// Thanks to @pooja201095
 const maxAmount = Math.max(...response.data.map((el) => el.amount));
 
 response.data.forEach((el, i) => {
