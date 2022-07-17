@@ -14,16 +14,16 @@ response = fetchData("./data.json");
 
 console.log(response.data);
 
+const maxAmount = Math.max(...response.data.map((el) => el.amount));
+
 response.data.forEach((el, i) => {
-  var highlight = "";
-  const bound = 55.0;
-  const marginTop =  43 - (el.amount / bound * 43);
-  console.log(marginTop);
-  if (new Date().getDay() - 1 == i) {
-    highlight = "chart__bar--highlight"
-  }
+  const barHeight = (el.amount / maxAmount) * 100;
+  const positionTop = 100 - barHeight;
+  const highlight =
+    (new Date().getDay() + 6) % 7 == i ? "chart__bar--highlight" : "";
+
   chart.innerHTML += `
-    <div class="chart__bar ${highlight}" style="margin-top: ${marginTop}%" >
+    <div class="chart__bar ${highlight}" style="height: ${barHeight}%; top: ${positionTop}%" >
       <div class="tooltip">$${el.amount}</div>
       <div class="chart__bar__date">${el.day}</div>
     </div>

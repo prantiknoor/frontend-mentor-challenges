@@ -99,6 +99,7 @@ main {
     display: flex;
     justify-content: space-between;
     margin: 2.6rem 0 3rem 0;
+    position: relative;
 }
 
 .chart__bar {
@@ -112,7 +113,6 @@ main {
 
 .chart__bar--highlight {
     background-color: var(--color-cyan);
-    bottom: 0;
 }
 
 .chart__bar:hover {
