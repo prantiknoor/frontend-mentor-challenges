@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -26,16 +26,16 @@
     <main>
       <div class="card">
         <!-- Advice ID goes here -->
-        <div class="card__advice-id">Advice #<span class="id"></span></div>
-        "<!-- Advice text goes here -->"
+        <p class="card__advice-id">Advice #<span id="advice-id"></span></p>
+        <!-- Advice text goes here -->
         <h1 class="card__quote"></h1>
         <!-- Divider goes here -->
         <picture class="card__divider">
           <source
-            media="(min-width: 400px)"
-            srcset="./images/pattern-divider-mobile.svg"
+            media="(min-width: 440px)"
+            srcset="./images/pattern-divider-desktop.svg"
           />
-          <img src="./images/pattern-divider-desktop.svg" alt="divider icon" />
+          <img src="./images/pattern-divider-mobile.svg" alt="divider icon" />
         </picture>
         <!-- Dice button goes here -->
         <button class="card__dice-button">
