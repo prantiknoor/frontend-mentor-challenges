@@ -115,12 +115,12 @@ footer {
   }
 }
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 500px) {
   :root {
-    --font-size-quote: 1.8rem;
+    --font-size-quote: 1.85rem;
   }
 
   .card {
-    min-width: 22rem;
+    min-width: 25rem;
   }
 }
