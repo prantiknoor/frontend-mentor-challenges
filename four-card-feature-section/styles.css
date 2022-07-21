@@ -55,3 +55,33 @@ main {
 footer {
     height: 2rem;
 }
+
+
+@media screen and (max-width: 720px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .card {
+    width: 16rem;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 14.5rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card {
+        width: 100%;
+    }
+
+    .attribution {
+        font-size: 0.8rem;
+    }
+}
