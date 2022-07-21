@@ -30,7 +30,8 @@ Users should be able to:
 ### Screenshot
 
 <img src="./screenshots/ss-desktop.png"/>
-<img src="./screenshots/ss-mobile-1.png" width="49.3%"/> <img src="./screenshots/ss-mobile-2.png" width="49.3%"/>
+
+<img src="./screenshots/ss-mobile-1.png" width="49.7%"/> <img src="./screenshots/ss-mobile-2.png" width="49.7%"/>
 
 ### Links
 
