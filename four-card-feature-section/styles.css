@@ -1,0 +1,57 @@
+
+main {
+    min-height: calc(100vh - 2rem);
+    padding-block: 2em;
+}
+
+.container .desc {
+    max-width: 30rem;
+    margin-bottom: 3rem;
+}
+
+.cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    --gap: 1.5rem;
+}
+
+.card {
+    position: relative;
+    background-color: hsl(var(--clr-light));
+    box-shadow: 2px 2px 16px hsl(var(--clr-dark) / 0.2);
+    padding: 1.8em;
+    border-radius: 6px;
+    max-height: 18rem;
+    overflow: hidden;
+}
+
+.card:first-child {
+    grid-row: 1/3;
+}
+
+.card:last-child {
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.card > p {
+    margin: 0.8rem 0 1.5rem 0;
+}
+
+.card > .icon img {
+    float: right;
+}
+
+.card > .top-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: hsl(var(--top-color));
+}
+
+footer {
+    height: 2rem;
+}
