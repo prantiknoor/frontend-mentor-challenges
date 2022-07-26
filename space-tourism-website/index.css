@@ -11,8 +11,8 @@
   /* font-sizes */
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: 6.25rem;
-  --fs-700: 3.5rem;
-  --fs-600: 2rem;
+  --fs-700: 2rem;
+  --fs-600: 1.5rem;
   --fs-500: 1rem;
   --fs-400: 1.125rem;
   --fs-300: 1rem;
@@ -625,7 +625,7 @@ background-image: url(./assets/technology/background-technology-mobile.jpg);
 
 .destination-meta {
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   border-top: 1px solid hsl(var(--clr-white) / .1);
   padding-top: 2.5rem;
   margin-top: 2.5rem;
@@ -648,6 +648,15 @@ background-image: url(./assets/technology/background-technology-mobile.jpg);
 .grid-container--crew  picture {
   grid-area: image;
   max-width: 60%;
+}
+
+.grid-container--crew picture::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: hsl(var(--clr-light) / .2);
+  transform: scaleX(1.4);
 }
 
 .grid-container--crew > .dot-indicators {
@@ -680,7 +689,7 @@ background-image: url(./assets/technology/background-technology-mobile.jpg);
 }
 
 .grid-container--technology .number-indicators {
-  margin-block: 1rem;
+  margin-block: 2rem;
   grid-area: tabs;
 }
 
@@ -750,7 +759,6 @@ background-image: url(./assets/technology/background-technology-mobile.jpg);
 
   .destination-meta {
     --gap: min(6vw, 6rem);
-    justify-content: start;
   }
   
   .grid-container--crew {
