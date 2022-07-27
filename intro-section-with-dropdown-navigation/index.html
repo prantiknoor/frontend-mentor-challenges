@@ -1,39 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Intro section with dropdown navigation | Frontend Mentor</title>
 
-  Features
-  Company
-  Careers
-  About
+    <!-- My stylesheets -->
+    <link rel="stylesheet" href="styles/_reset.css" />
+    <link rel="stylesheet" href="styles/_utility.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
 
-  Login
-  Register
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="snap logo" />
+      </div>
 
-  Make remote work
+      <button class="toggle-btn"><span class="sr-only">Menu</span></button>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+      <nav>
+        <ul>
+          <li class="dropdown">Features</li>
+          <li>Company</li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <div><a href="#">Learn more</a></div>
+
+      <div>
+        <img src="./images/client-databiz.svg" alt="client databix">
+        <img src="./images/client-audiophile.svg" alt="client audiophile">
+        <img src="./images/client-meet.svg" alt="client meet">
+        <img src="./images/client-maker.svg" alt="client maker">
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/prantiknoor" target="_blank">Prantik</a>.
+    </footer>
+  </body>
 </html>
