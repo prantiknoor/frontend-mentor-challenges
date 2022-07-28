@@ -20,11 +20,17 @@
     gap: var(--gap, 1rem);
 }
 
-/* colors */
-.text-dark { color: var(--clr-dark); }
-.text-accent { color: var(--clr-accent); }
+.text-center {
+  text-align: center;
+}
 
-.bg-light { background-color: var(--clr-light); }
+/* colors */
+.text-dark { color: hsl(var(--clr-dark)); }
+.text-light { color: hsl(var(--clr-light)); }
+.text-accent { color: hsl(var(--clr-accent)); }
+
+.bg-dark { background-color: hsl(var(--clr-dark)); }
+.bg-light { background-color: hsl(var(--clr-light)); }
 
 
 /* font sizes */
