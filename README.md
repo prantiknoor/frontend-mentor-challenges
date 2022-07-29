@@ -1,5 +1,6 @@
 ## My solutions of [Frontend Mentor's Challenges](https://www.frontendmentor.io/challenges).
 
+- [Responsive Intro section with dropdown navigation](https://frontend-mentor-challenges-prantik.netlify.app/intro-section-with-dropdown-navigation/)
 - [Responsive Space tourism multipage website](https://frontend-mentor-challenges-prantik.netlify.app/space-tourism-website/)
 - [Advice generator app with vanilla JavaScript](https://frontend-mentor-challenges-prantik.netlify.app/advice-generator-app/)
 - [Dynamic expenses chart component solution](https://frontend-mentor-challenges-prantik.netlify.app/expenses-chart-component/)
