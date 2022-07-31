@@ -112,6 +112,12 @@ input[type="number"]:invalid {
   padding-block: 0.3rem;
 }
 
+.calculator__input-tip label:not(:first-child):hover,
+.calculator__input-tip label:not(:first-child):focus {
+  color: hsl(var(--clr-dark));
+  background-color: hsl(var(--clr-accent) / 0.6);
+}
+
 .calculator__input-tip input:checked + label {
   color: hsl(var(--clr-dark));
   background-color: hsl(var(--clr-accent));
@@ -121,12 +127,6 @@ input[type="number"]:invalid {
   outline: 1px solid hsl(var(--clr-accent));
   color: hsl(var(--clr-s-dark));
   background-color: hsl(var(--clr-s-light));
-}
-
-.calculator__input-tip label:not(:first-child):hover,
-.calculator__input-tip label:not(:first-child):focus {
-  color: hsl(var(--clr-dark));
-  background-color: hsl(var(--clr-accent) / 0.6);
 }
 
 .calculator__input-tip label.custom:focus {
@@ -164,13 +164,12 @@ input[type="number"]:invalid {
   cursor: pointer;
 }
 
-.result > button:hover,
-.result > button:focus {
+.result > button:hover {
   background-color: hsl(var(--clr-t-accent));
 }
 
 .result > button:disabled {
-  background-color: hsl(var(--clr-s-accent)/0.8);
+  background-color: hsl(var(--clr-s-accent));
   cursor: auto;
 }
 
@@ -191,6 +190,10 @@ input[type="number"]:invalid {
 
   .card {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card > * {
+    min-width: 26rem;
   }
 
   .calculator__input-tip {
