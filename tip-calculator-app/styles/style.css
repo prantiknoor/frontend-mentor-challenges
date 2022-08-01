@@ -62,8 +62,8 @@ body {
 
 .calculator .icon {
   position: absolute;
-  top: 50%;
   left: 1rem;
+  top: 50%;
   transform: translateY(-50%);
 }
 
@@ -135,10 +135,6 @@ input[type="number"]:invalid {
   background-color: hsl(var(--clr-s-light));
 }
 
-.calculator__input-tip label.custom.custom--invalid {
-  outline-color: hsl(12, 33%, 57%);
-}
-
 .result {
   --padding: 1.5rem;
   --gap: calc(var(--padding) + 0.75rem);
@@ -171,10 +167,6 @@ input[type="number"]:invalid {
 .result > button:disabled {
   background-color: hsl(var(--clr-s-accent));
   cursor: auto;
-}
-
-.result > p {
-  text-align: right;
 }
 
 @media screen and (min-width: 60rem) {
