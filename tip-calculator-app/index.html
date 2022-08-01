@@ -35,7 +35,7 @@
           <label class="title text-s-dark block" for="input-bill">Bill</label>
           <div class="input-field">
             <img class="icon" src="./images/icon-dollar.svg" alt="dollar icon">
-            <input min="1" class="fs-600 bg-s-light text-dark" placeholder="0" type="number" name="bill"
+            <input min="1" step="1.00" oninput="calculateTip()" class="fs-600 bg-s-light text-dark" placeholder="0" type="number" name="bill"
               id="input-bill">
           </div>
         </div>
@@ -43,28 +43,28 @@
           <label class="title block text-s-dark" for="tip">Select Tip %</label>
 
           <div>
-            <input type="radio" name="tip" value="5" id="5-percent">
-            <label tabindex="0" class="fs-600 text-center text-light bg-dark" for="5-percent">5%</label>
+            <input onchange="calculateTip()" type="radio" name="tip" value="5" id="5-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="5-percent">5%</label>
           </div>
           <div>
-            <input type="radio" name="tip" value="10" id="10-percent">
-            <label tabindex="0" class="fs-600 text-center text-light bg-dark" for="10-percent">10%</label>
+            <input onchange="calculateTip()" type="radio" name="tip" value="10" id="10-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="10-percent">10%</label>
           </div>
           <div>
-            <input type="radio" name="tip" value="15" id="15-percent">
-            <label tabindex="0" class="fs-600 text-center text-light bg-dark" for="15-percent">15%</label>
+            <input onchange="calculateTip()" type="radio" name="tip" value="15" id="15-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="15-percent">15%</label>
           </div>
           <div>
-            <input type="radio" name="tip" value="25" id="25-percent">
-            <label tabindex="0" class="fs-600 text-center text-light bg-dark" for="25-percent">25%</label>
+            <input onchange="calculateTip()" type="radio" name="tip" value="25" id="25-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="25-percent">25%</label>
           </div>
           <div>
-            <input type="radio" name="tip" value="50" id="50-percent">
-            <label tabindex="0" class="fs-600 text-center text-light bg-dark" for="50-percent">50%</label>
+            <input onchange="calculateTip()" type="radio" name="tip" value="50" id="50-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="50-percent">50%</label>
           </div>
           <div>
-            <input type="radio" name="tip" value="0" id="custom-percent">
-            <label class="custom fs-600 text-center text-s-dark bg-s-light" for="custom-percent"
+            <input onchange="calculateTip()" type="radio" name="tip" value="0" id="custom-percent">
+            <label oninput="updateValue(event); calculateTip()" onkeypress="return inputOnlyNumber(event)" onfocus="toggleText(event)" onfocusout="toggleText(event)"  class="custom fs-600 text-center text-s-dark bg-s-light" for="custom-percent"
               contenteditable="true">Custom</label>
           </div>
         </div>
@@ -72,7 +72,7 @@
           <label class="title block text-s-dark" for="input-people">Number of People</label>
           <div class="input-field">
             <img class="icon" src="./images/icon-person.svg" alt="dollar icon">
-            <input min="1" class="fs-600 bg-s-light text-dark" type="number" name="people" placeholder="0"
+            <input min="1" oninput="calculateTip()" onkeypress="return event.charCode !== 46" class="fs-600 bg-s-light text-dark" type="number" name="people" placeholder="0"
               id="input-people">
           </div>
         </div>
@@ -85,7 +85,7 @@
           <h3 class="fs-400 text-light">Total<span class="fs-300 block text-s-accent">/ person</span></h3>
           <p id="total-amount" class="fs-700 text-accent">$0.00</p>
         </div>
-        <button onclick="reset()" class="bg-accent text-dark fs-500 uppercase" type="reset">Reset</button>
+        <button onclick="resetAll()" class="bg-accent text-dark fs-500 uppercase" type="reset">Reset</button>
       </div>
     </form>
   </main>
