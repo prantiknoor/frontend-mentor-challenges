@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Tip calculator app | Frontend Mentor</title>
+
+  <!-- My stylesheets -->
+  <link rel="stylesheet" href="./styles/_reset.css">
+  <link rel="stylesheet" href="./styles/_utility.css">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <!-- My scripts -->
+  <script src="./scripts/script.js" defer></script>
+
+  <!-- Custom fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body class="flex ff-mono fs-400 bg-t-accent center">
+  <main class="container grid center">
+    <header class="header">
+      <h1 class="sr-only">Tip calculator app</h1>
+      <img src="./images/logo.svg" alt="splitter logo">
+    </header>
+    <form class="card bg-light grid">
+      <div class="calculator flex flex--column">
+        <div class="calculator__input-bill">
+          <label class="title text-s-dark block" for="input-bill">Bill</label>
+          <div class="input-field">
+            <img class="icon" src="./images/icon-dollar.svg" alt="dollar icon">
+            <input min="1" step="1.00" oninput="calculateTip()" class="fs-600 bg-s-light text-dark" placeholder="0" type="number" name="bill"
+              id="input-bill">
+          </div>
+        </div>
+        <div class="calculator__input-tip grid">
+          <label class="title block text-s-dark" for="tip">Select Tip %</label>
+
+          <div>
+            <input onchange="calculateTip()" type="radio" name="tip" value="5" id="5-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="5-percent">5%</label>
+          </div>
+          <div>
+            <input onchange="calculateTip()" type="radio" name="tip" value="10" id="10-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="10-percent">10%</label>
+          </div>
+          <div>
+            <input onchange="calculateTip()" type="radio" name="tip" value="15" id="15-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="15-percent">15%</label>
+          </div>
+          <div>
+            <input onchange="calculateTip()" type="radio" name="tip" value="25" id="25-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="25-percent">25%</label>
+          </div>
+          <div>
+            <input onchange="calculateTip()" type="radio" name="tip" value="50" id="50-percent">
+            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="50-percent">50%</label>
+          </div>
+          <div>
+            <input onchange="calculateTip()" type="radio" name="tip" value="0" id="custom-percent">
+            <label oninput="updateValue(event); calculateTip()" onkeypress="return inputOnlyNumber(event)" onfocus="toggleText(event)" onfocusout="toggleText(event)"  class="custom fs-600 text-center text-s-dark bg-s-light" for="custom-percent"
+              contenteditable="true">Custom</label>
+          </div>
+        </div>
+        <div class="calculator__input-people">
+          <label class="title block text-s-dark" for="input-people">Number of People</label>
+          <div class="input-field">
+            <img class="icon" src="./images/icon-person.svg" alt="dollar icon">
+            <input min="1" oninput="calculateTip()" onkeypress="return event.charCode !== 46" class="fs-600 bg-s-light text-dark" type="number" name="people" placeholder="0"
+              id="input-people">
+          </div>
+        </div>
+      </div>
+      <div class="result flex flex--column bg-dark">
+        <div class="wrapper grid">
+          <h3 class="fs-400 text-light">Tip Amount<span class="fs-300 block text-s-accent">/ person</span></h3>
+          <p id="tip-amount" class="fs-700 text-accent">$0.00</p>
+
+          <h3 class="fs-400 text-light">Total<span class="fs-300 block text-s-accent">/ person</span></h3>
+          <p id="total-amount" class="fs-700 text-accent">$0.00</p>
+        </div>
+        <button onclick="resetAll()" class="bg-accent text-dark fs-500 uppercase" type="reset">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="attribution sr-only">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/prantiknoor" target="_blank">Prantik</a>.
+  </footer>
+</body>
+
+</html>

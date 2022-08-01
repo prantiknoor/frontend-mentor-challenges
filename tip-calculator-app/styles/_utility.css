@@ -1,0 +1,74 @@
+/* -------------------------- */
+/* Utility classes            */
+/* -------------------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.block {
+    display: block;
+}
+
+.center {
+    justify-content: center;
+    justify-items: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* background colors */
+.bg-dark { background-color: hsl(var(--clr-dark)); }
+.bg-light { background-color: hsl(var(--clr-light)); }
+.bg-accent { background-color: hsl(var(--clr-accent)); }
+.bg-s-dark { background-color: hsl(var(--clr-s-dark)); }
+.bg-s-light { background-color: hsl(var(--clr-s-light)); }
+.bg-s-accent { background-color: hsl(var(--clr-s-accent)); }
+.bg-t-accent { background-color: hsl(var(--clr-t-accent)); }
+
+/* text colors */
+.text-dark { color: hsl(var(--clr-dark)); }
+.text-light { color: hsl(var(--clr-light)); }
+.text-accent { color: hsl(var(--clr-accent)); }
+.text-s-dark { color: hsl(var(--clr-s-dark)); }
+.text-s-light { color: hsl(var(--clr-s-light)); }
+.text-s-accent { color: hsl(var(--clr-s-accent)); }
+.text-t-accent { color: hsl(var(--clr-t-accent)); }
+
+/* font families */
+.ff-mono { font-family: var(--ff-mono); }
+
+/* font sizes */
+.fs-300 { font-size: var(--fs-300); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-700 { font-size: var(--fs-700); }
