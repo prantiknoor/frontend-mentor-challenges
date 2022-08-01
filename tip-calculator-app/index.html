@@ -44,23 +44,23 @@
 
           <div>
             <input onchange="calculateTip()" type="radio" name="tip" value="5" id="5-percent">
-            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="5-percent">5%</label>
+            <label onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="5-percent">5%</label>
           </div>
           <div>
             <input onchange="calculateTip()" type="radio" name="tip" value="10" id="10-percent">
-            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="10-percent">10%</label>
+            <label onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="10-percent">10%</label>
           </div>
           <div>
             <input onchange="calculateTip()" type="radio" name="tip" value="15" id="15-percent">
-            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="15-percent">15%</label>
+            <label onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="15-percent">15%</label>
           </div>
           <div>
             <input onchange="calculateTip()" type="radio" name="tip" value="25" id="25-percent">
-            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="25-percent">25%</label>
+            <label onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="25-percent">25%</label>
           </div>
           <div>
             <input onchange="calculateTip()" type="radio" name="tip" value="50" id="50-percent">
-            <label role="button" onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="50-percent">50%</label>
+            <label onkeypress="selectRadio(event)" tabindex="0" class="fs-600 text-center text-light bg-dark" for="50-percent">50%</label>
           </div>
           <div>
             <input onchange="calculateTip()" type="radio" name="tip" value="0" id="custom-percent">
@@ -79,10 +79,10 @@
       </div>
       <div class="result flex flex--column bg-dark">
         <div class="wrapper grid">
-          <h3 class="fs-400 text-light">Tip Amount<span class="fs-300 block text-s-accent">/ person</span></h3>
+          <h2 class="fs-400 text-light">Tip Amount<span class="fs-300 block text-s-accent">/ person</span></h2>
           <p id="tip-amount" class="fs-700 text-accent">$0.00</p>
 
-          <h3 class="fs-400 text-light">Total<span class="fs-300 block text-s-accent">/ person</span></h3>
+          <h2 class="fs-400 text-light">Total<span class="fs-300 block text-s-accent">/ person</span></h2>
           <p id="total-amount" class="fs-700 text-accent">$0.00</p>
         </div>
         <button onclick="resetAll()" class="bg-accent text-dark fs-500 uppercase" type="reset">Reset</button>
