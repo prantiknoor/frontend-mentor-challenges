@@ -1,15 +1,18 @@
-const dropdowns = document.querySelectorAll(".dropdown");
+function toggleDropdown(event) {
+  const element = event.target.parentElement;
+  if (element.matches(".dropdown")) {
+    const expanded = element.getAttribute("aria-expanded") === "true";
 
-dropdowns.forEach((dropdown) => {
-  dropdown.addEventListener("click", (e) => {
-    const expanded = dropdown.getAttribute("aria-expanded") === "true";
-    dropdown.setAttribute("aria-expanded", !expanded);
-  });
+    if(window.innerWidth >= 720) closeAllDropdown();
+    
+    element.setAttribute("aria-expanded", !expanded);
+  } else {
+    closeAllDropdown();
+  }
+}
 
-  dropdown.addEventListener("mouseover", (e) => {
-    dropdown.setAttribute("aria-expanded", true);
-  });
-  dropdown.addEventListener("mouseout", (e) => {
+function closeAllDropdown() {
+  document.querySelectorAll(".dropdown").forEach((dropdown) => {
     dropdown.setAttribute("aria-expanded", false);
   });
-});
+}
