@@ -5,25 +5,22 @@ const peopleInput = document.querySelector("#input-people");
 const tipAmountEl = document.querySelector("#tip-amount");
 const totalAmountEl = document.querySelector("#total-amount");
 
-
 function calculateTip() {
-  const selectedTipPercent = document.querySelector(
-    'input[name="tip"]:checked'
+  const tipPercentInput = document.querySelector('input[name="tip"]:checked');
+
+  if (!tipPercentInput) return;
+
+  const [bill, people, percent] = [billInput, peopleInput, tipPercentInput].map(
+    (input) => input.value
   );
 
-  if (!selectedTipPercent) return;
+  if ([bill, people, percent].find((e) => e <= 0) == "") return;
 
-  const empty = [billInput, peopleInput, selectedTipPercent].find(
-    (input) => input.value <= 0
-  );
+  const tipPerPeople = ((percent / 100) * bill) / people;
+  const totalPerPeople = bill / people + tipPerPeople;
 
-  if (empty) return;
-
-  const total = billInput.value / peopleInput.value;
-  const tip = (selectedTipPercent.value / 100) * total;
-
-  tipAmountEl.innerText = "$" + tip.toFixed(2);
-  totalAmountEl.innerText = "$" + total.toFixed(2);
+  tipAmountEl.innerText = "$" + tipPerPeople.toFixed(2);
+  totalAmountEl.innerText = "$" + totalPerPeople.toFixed(2);
 }
 
 function resetAll() {
@@ -58,4 +55,9 @@ function selectRadio(event) {
   if (event.code == "Enter" || event.code == "Space") {
     event.target.control.checked = true;
   }
+}
+
+function changeErrorState(event) {
+  let state = event.target.value < 0 ? "negative" : "zero";
+  event.target.parentElement.querySelector(".error-msg span").innerText = state;
 }
