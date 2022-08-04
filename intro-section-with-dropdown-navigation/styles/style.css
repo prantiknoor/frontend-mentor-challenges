@@ -78,6 +78,7 @@ main a {
 .primary-navigation > ul {
   flex-direction: inherit;
   padding: 0;
+  list-style: none;
 }
 
 .primary-navigation li:hover {
@@ -115,12 +116,13 @@ main a {
   background-image: url(../images/icon-close-menu.svg);
 }
 
-
 .dropdown button {
   cursor: pointer;
   border: none;
   padding: 0;
   background: none;
+  width: 100%;
+  text-align: start;
 }
 
 .dropdown > button::after {
@@ -157,6 +159,7 @@ main a {
 /* ------- Main ---------- */
 
 .container {
+  padding-top: 1rem;
   justify-items: center;
   grid-template-areas:
     "image"
@@ -171,6 +174,14 @@ main a {
   text-align: center;
   padding: 1.6rem 1rem;
   --gap: 0.5rem;
+}
+
+.wrapper h1 {
+  line-height: 1;
+}
+
+.wrapper > h1 > br {
+  display: none;
 }
 
 .wrapper p {
@@ -201,8 +212,8 @@ main a {
 }
 
 .clients {
-  margin-block: 2.5rem 1rem;
-  --gap: 1.9rem;
+  margin: clamp(2rem, 6vh, 4rem) 1rem 0.5rem 1rem;
+  --gap: 2rem;
   grid-area: clients;
   align-items: center;
 }
@@ -219,7 +230,6 @@ main a {
 .attribution a {
   color: inherit;
 }
-
 
 @media (min-width: 45rem) {
   .primary-header {
@@ -253,7 +263,9 @@ main a {
 
   .container {
     margin-block: auto;
-    grid-template-columns: 1fr minmax(20rem, 33rem) 1fr minmax(18rem, 28rem) 1fr;
+    grid-template-columns: 1fr minmax(20rem, 33rem) calc(
+        clamp(1rem, 3.33vw, 3rem) - (3rem - 3.33vw)
+      ) minmax(18rem, 30rem) 1fr;
     grid-template-areas: ". wrapper . image .";
   }
 
@@ -264,6 +276,10 @@ main a {
 
   .wrapper h1 {
     margin-top: 4rem;
+  }
+
+  .wrapper > h1 > br {
+    display: block;
   }
 
   .hero-image {

@@ -22,37 +22,38 @@
   <!-- my scripts -->
   <script src="./scripts/navigation.js" defer></script>
   <script src="./scripts/dropdown.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
 </head>
 
-<body>
+<body class="bg-light">
   <header class="primary-header flex">
     <img class="logo" src="./images/logo.svg" alt="snap logo" />
 
     <button aria-controls="primary-navigation" aria-expanded="false" class="toggle-button"><span class="sr-only">Menu</span></button>
     <nav id="primary-navigation" data-visible="false" class="primary-navigation bg-light flex">
-      <ul class="flex" role="list">
+      <ul class="flex">
         <li class="dropdown" aria-expanded="false">
           <button>Features</button>
           <div class="flex" role="list">
-            <a href="#" class="flex" role="listitem"><img src="./images/icon-todo.svg" aria-hidden="true">Todo List</a>
-            <a href="#" class="flex" role="listitem"><img src="./images/icon-calendar.svg" aria-hidden="true">Calendar</a>
-            <a href="#" class="flex" role="listitem"><img src="./images/icon-reminders.svg"aria-hidden="true" >Reminders</a>
-            <a href="#" class="flex" role="listitem"><img src="./images/icon-planning.svg" aria-hidden="true">Planning</a>
+            <a href="#" class="flex" ><img src="./images/icon-todo.svg" role="none">Todo List</a>
+            <a href="#" class="flex"><img src="./images/icon-calendar.svg" role="none">Calendar</a>
+            <a href="#" class="flex"><img src="./images/icon-reminders.svg"role="none" >Reminders</a>
+            <a href="#" class="flex"><img src="./images/icon-planning.svg" role="none">Planning</a>
           </div>
         </li>
         <li class="dropdown" aria-expanded="false">
           <button>Company</button>
           <div class="flex" role="list">
-            <a href="#" class="flex" role="listitem">History</a>
-            <a href="#" class="flex" role="listitem">Our Team</a>
-            <a href="#" class="flex" role="listitem">Blog</a>
+            <a href="#" class="flex">History</a>
+            <a href="#" class="flex">Our Team</a>
+            <a href="#" class="flex">Blog</a>
           </div>
         </li>
         <li><a href="#careers">Careers</a></li>
         <li><a href="#about">About</a></li>
       </ul>
 
-      <ul class="flex text-center" role="list">
+      <ul class="flex text-center">
         <li><a href="#">Login</a></li>
         <li><a href="#" class="btn-register">Register</a></li>
       </ul>
@@ -66,7 +67,7 @@
     </picture>
 
     <div class="wrapper flex">
-      <h1 class="fs-800">Make remote work</h1>
+      <h1 class="fs-800">Make <br>remote work</h1>
       <p class="fs-500 text-accent">
         Get your team in sync, no matter your location. Streamline processes,
         create team rituals, and watch productivity soar.
