@@ -5,16 +5,21 @@ const peopleInput = document.querySelector("#input-people");
 const tipAmountEl = document.querySelector("#tip-amount");
 const totalAmountEl = document.querySelector("#total-amount");
 
+const resetButton = document.querySelector("button[type='reset']");
+
 function calculateTip() {
   const tipPercentInput = document.querySelector('input[name="tip"]:checked');
 
-  if (!tipPercentInput) return;
+  const percent = tipPercentInput ? tipPercentInput.value : "";
+  const [bill, people] = [billInput, peopleInput].map((input) => input.value);
 
-  const [bill, people, percent] = [billInput, peopleInput, tipPercentInput].map(
-    (input) => input.value
-  );
+  if ([bill, people, percent].find((e) => e > 0) !== undefined) {
+    resetButton.removeAttribute("disabled");
+  } else {
+    resetButton.setAttribute("disabled", "");
+  }
 
-  if ([bill, people, percent].find((e) => e <= 0) == "") return;
+  if ([bill, people, percent].find((e) => e <= 0) !== undefined) return;
 
   const tipPerPeople = ((percent / 100) * bill) / people;
   const totalPerPeople = bill / people + tipPerPeople;
@@ -26,6 +31,10 @@ function calculateTip() {
 function resetAll() {
   tipAmountEl.innerText = "$0.00";
   totalAmountEl.innerText = "$0.00";
+
+  setTimeout(() => {
+    resetButton.setAttribute("disabled", true);
+  }, 10);
 }
 
 function updateValue(event) {
