@@ -35,8 +35,9 @@
           <label class="title text-s-dark block" for="input-bill">Bill</label>
           <div class="input-field">
             <img class="icon" src="./images/icon-dollar.svg" alt="dollar icon">
-            <input min="1" step="1.00" oninput="calculateTip()" class="fs-600 bg-s-light text-dark" placeholder="0" type="number" name="bill"
+            <input min="1" step="1.00" oninput="calculateTip(); changeErrorState(event)" class="fs-600 bg-s-light text-dark" placeholder="0" type="number" name="bill"
               id="input-bill">
+            <p class="error-msg">Can't be <span class="state">zero</span></p>
           </div>
         </div>
         <div class="calculator__input-tip grid">
@@ -72,8 +73,9 @@
           <label class="title block text-s-dark" for="input-people">Number of People</label>
           <div class="input-field">
             <img class="icon" src="./images/icon-person.svg" alt="dollar icon">
-            <input min="1" oninput="calculateTip()" onkeypress="return event.charCode !== 46" class="fs-600 bg-s-light text-dark" type="number" name="people" placeholder="0"
+            <input min="1" oninput="calculateTip(); changeErrorState(event)" onkeypress="return event.charCode !== 46" class="fs-600 bg-s-light text-dark" type="number" name="people" placeholder="0"
               id="input-people">
+            <p class="error-msg">Can't be <span class="state">zero</span></p>
           </div>
         </div>
       </div>
@@ -85,7 +87,7 @@
           <h2 class="fs-400 text-light">Total<span class="fs-300 block text-s-accent">/ person</span></h2>
           <p id="total-amount" class="fs-700 text-accent">$0.00</p>
         </div>
-        <button onclick="resetAll()" class="bg-accent text-dark fs-500 uppercase" type="reset">Reset</button>
+        <button disabled="true" onclick="resetAll()" class="bg-accent text-dark fs-500 uppercase" type="reset">Reset</button>
       </div>
     </form>
   </main>

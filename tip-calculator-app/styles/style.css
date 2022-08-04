@@ -81,11 +81,26 @@ input[type="number"]::placeholder {
 }
 
 input[type="number"]:focus {
-  outline: 2px solid hsl(var(--clr-accent));
+  outline: 1.5px solid hsl(var(--clr-accent));
 }
 
 input[type="number"]:invalid {
-  outline-color: hsl(12, 33%, 57%);
+  outline: 1.5px solid hsl(var(--clr-accent));
+  outline-color: hsl(12, 80%, 57%);
+}
+
+input[type="number"]:invalid ~ .error-msg {
+  display: block;
+}
+
+.error-msg {
+  display: none;
+  font-size: 0.9em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: hsl(12, 80%, 57%);
+  transform: translateY(calc(-100% - 0.5rem));
 }
 
 .calculator__input-tip {
