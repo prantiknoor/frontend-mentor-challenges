@@ -1,0 +1,27 @@
+/* ------------------------- */
+/* Custom properties         */
+/* ------------------------- */
+
+:root {
+    /* colors */
+    --clr-dark: 300 43% 22%;
+    --clr-light: 0 0% 100%;
+    --clr-accent: 333 80% 67%;
+
+    --clr-s-dark: 303 10% 53%;
+    --clr-s-light: 300 24% 96%;
+
+    /* font sizes */
+    --fs-800: 2.375rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+
+    /* font families */
+    --ff-sans-serif: 'League Spartan', sans-serif;
+}
+
+@media screen and (min-width: 45rem) {
+    :root {
+        --fs-800: 3.375rem;
+    }
+}
