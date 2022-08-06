@@ -20,9 +20,18 @@
     gap: var(--gap, 1rem);
 }
 
-.text-center {
-  text-align: center;
+.flex--column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap, 1rem);
 }
+
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }
+
+.text-center {  text-align: center; }
+
+.lh-1 { line-height: 1; }
 
 /* colors */
 .text-dark { color: hsl(var(--clr-dark)); }
@@ -45,3 +54,11 @@
 
 /* font families */
 .ff-sans-serif { font-family: var(--ff-sans-serif); }
+
+/* font weights */
+.fw-700 { font-weight: 700; }
+.fw-500 { font-weight: 500; }
+.fw-400 { font-weight: 400; }
+
+/* letter spacing */
+.ls-tight { letter-spacing: -0.015em; }
