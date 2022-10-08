@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .big-card {
+    @apply flex flex-col gap-y-5 justify-between items-center p-8 font-bold border-t-4 bg-light-g-blue rounded-md;
+  }
+
+  .small-card {
+    @apply grid grid-cols-2 gap-y-5 p-6 font-bold bg-light-g-blue rounded-md;
+  }
+}
