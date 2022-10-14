@@ -4,10 +4,10 @@
 
 @layer components {
   .big-card {
-    @apply flex flex-col gap-y-5 justify-between items-center p-8 font-bold border-t-4 bg-light-g-blue rounded-md;
+    @apply flex flex-col gap-y-5 justify-between items-center p-8 font-bold border-t-4 bg-light-g-blue rounded-md w-full max-w-[16rem];
   }
 
   .small-card {
-    @apply grid grid-cols-2 gap-y-5 p-6 font-bold bg-light-g-blue rounded-md;
+    @apply grid grid-cols-2 gap-y-5 p-6 font-bold bg-light-g-blue rounded-md w-full max-w-[16rem];
   }
 }
