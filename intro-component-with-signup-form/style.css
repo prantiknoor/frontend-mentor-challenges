@@ -1,0 +1,27 @@
+/* ------------------ */
+/* Custom properties  */
+/* ------------------ */
+
+:root {
+    /* Colors */
+    --clr-light: 0, 100%, 100%;
+    --clr-dark: 249, 10%, 26%;
+    --clr-accent: 248, 32%, 49%;
+    --clr-primary-1: 0, 100%, 74%;
+    --clr-primary-2: 154, 59%, 51%;
+
+    /* Font sizes */
+    --fs-800: 1.75rem;
+    --fs-500: 1rem;
+    --fs-400: 0.875rem;
+    --fs-300: 0.6875rem;
+
+    /* Font families */
+    --ff-sans: 'Poppins', sans-serif;
+}
+
+@media screen and (min-width: 48rem) {
+    :root {
+        --fs-800: 3rem;
+    }
+}
