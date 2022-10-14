@@ -37,7 +37,7 @@
     gap: var(--gap, 1rem);
 }
 
-.flex-column { flex-direction: column;}
+.flex--column { flex-direction: column;}
 
 .grid {
     display: grid;
@@ -86,3 +86,68 @@
   border: 0;
 }
 
+body {
+    font-family: var(--ff-sans);
+    margin-inline: 1.5rem;
+    font-size: var(--fs-500);
+    background-color: hsl(var(--clr-primary-1));
+    background-image: url(./images/bg-intro-mobile.png);
+}
+
+.header {
+    margin-block: 4rem;
+}
+
+.card-trial {
+    padding: 1.25rem;
+    border-radius: 0.5rem;
+    margin-block: 1.5rem;
+    box-shadow: 0 6px 0 hsla(var(--clr-dark), 0.3);
+}
+
+.form {
+    background-color: hsl(var(--clr-light));
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 6px 0 hsla(var(--clr-dark), 0.3);
+}
+
+.form input {
+    font-size: var(--fs-400);
+    padding: 1rem;
+    border: 1px solid hsl(var(--clr-gray));
+    border-radius: 0.4rem;
+}
+
+.form input::placeholder {
+    font-weight: 600;
+}
+
+.button {
+    background-color: hsla(var(--clr-primary-2), 0.9);
+    font-size: var(--fs-500);
+    color: hsl(var(--clr-light));
+    font-weight: 600;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 0 hsla(var(--clr-primary-2), 1);
+}
+
+.terms {
+    margin: 0;
+    text-align: center;
+    color: hsl(var(--clr-gray));
+    font-size: var(--fs-300);
+}
+
+footer {
+    text-align: center;
+    font-size: var(--fs-300);
+    color: hsla(var(--clr-light), .6);
+}
+
+.attribution a {
+    color: inherit;
+}
