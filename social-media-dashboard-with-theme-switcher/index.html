@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Social Media Dashboard</title>
+
+  <link rel="stylesheet" href="dist/output.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="px-6">
+
+  <header class="mt-10 font-bold">
+    <h1 class="text-2xl ">Social Media Dashboard</h1>
+    <p class="text-sm text-dark-g-blue">Total Followers: 23,004</p>
+  </header>
+
+  <div class=" h-[1px] w-auto bg-toggle mt-6 mb-4"></div>
+
+  <div class="flex justify-between mb-10">
+    <label for="darkmode" class="text-dark-g-blue font-bold">Dark Mode</label>
+    <!-- TODO: make toggle button -->
+    <input type="checkbox" name="darkmode" id="darkmode">
+  </div>
+
+  <section class="flex justify-between items-center flex-wrap gap-y-6">
+    <div class="big-card border-t-facebook">
+      <div>
+        <img src="./images/icon-facebook.svg" alt="facebook icon" class="inline-block w-5">
+        <span class="text-sm text-dark-d-blue">@nathanf</span>
+      </div>
+      <p class="text-center">
+        <span class="block text-6xl">1987</span>
+        <span class="uppercase tracking-[.25em] text-sm font-normal text-dark-g-blue">Followers</span>
+      </p>
+      <p class="text-sm text-lime-green"><img class="inline-block" src="./images/icon-up.svg" alt="arrow up"> 12 Today</p>
+    </div>
+
+    <div class="big-card border-t-twitter">
+      <div>
+        <img src="./images/icon-twitter.svg" alt="twitter icon" class="inline-block w-5">
+        <span class="text-sm text-dark-d-blue">@nathanf</span>
+      </div>
+      <p class="text-center">
+        <span class="block text-6xl">1024</span>
+        <span class="uppercase tracking-[.25em] text-sm font-normal text-dark-g-blue">Followers</span>
+      </p>
+      <p class="text-sm text-lime-green"><img class="inline-block" src="./images/icon-up.svg" alt="arrow up"> 99 Today</p>
+    </div>
+
+    <!-- TODO: add gradient top border -->
+    <div class="big-card">
+      <div>
+        <img src="./images/icon-instagram.svg" alt="instagram icon" class="inline-block w-5">
+        <span class="text-sm text-dark-d-blue">@realnathanf</span>
+      </div>
+      <p class="text-center">
+        <span class="block text-6xl">11k</span>
+        <span class="uppercase tracking-[.25em] text-sm font-normal text-dark-g-blue">Followers</span>
+      </p>
+      <p class="text-sm text-lime-green"><img class="inline-block" src="./images/icon-up.svg" alt="arrow up"> 1099 Today</p>
+    </div>
+
+    <div class="big-card border-t-youtube">
+      <div>
+        <img src="./images/icon-youtube.svg" alt="youtube icon" class="inline-block w-5">
+        <span class="text-sm text-dark-d-blue">Nathan F.</span>
+      </div>
+      <p class="text-center">
+        <span class="block text-6xl">8239</span>
+        <span class="uppercase tracking-[.25em] text-sm font-normal text-dark-g-blue">Subscribers</span>
+      </p>
+      <p class="text-sm text-bright-red"><img class="inline-block" src="./images/icon-down.svg" alt="arrow down"> 144 Today</p>
+    </div>
+
+    
+  </section>
+
+
+
+
+
+  <section class="my-8 grid flex-wrap gap-y-5">
+    <!-- <h2 class="text-2xl font-bold text-dark-g-blue">Overview - Today</h2> -->
+
+    <div class="small-card">
+      <h3 class="text-sm text-dark-g-blue">Page Views</h3>
+      <img class="justify-self-end w-6" src="./images/icon-facebook.svg" alt="facebook icon">
+      <p class="text-3xl">87</p>
+      <span class="justify-self-end self-end text-sm text-lime-green"><img class="inline-block"
+          src="./images/icon-up.svg" alt="arrow up">
+        3%</span>
+    </div>
+
+    <div class="small-card">
+      <h3 class="text-sm text-dark-g-blue">Likes</h3>
+      <img class="justify-self-end w-6" src="./images/icon-facebook.svg" alt="facebook icon">
+      <p class="text-3xl">52</p>
+      <span class="justify-self-end self-end text-sm text-bright-red"><img class="inline-block" src="./images/icon-down.svg"
+          alt="arrow down">
+        3%</span>
+    </div>
+
+    <div class="small-card">
+      <h3 class="text-sm text-dark-g-blue">Likes</h3>
+      <img class="justify-self-end w-6" src="./images/icon-instagram.svg" alt="instagram icon">
+      <p class="text-3xl">5462</p>
+      <span class="justify-self-end self-end text-sm text-lime-green"><img class="inline-block" src="./images/icon-up.svg"
+          alt="arrow up">
+        2257%</span>
+    </div>
+
+    <div class="small-card">
+      <h3 class="text-sm text-dark-g-blue">Profile Views</h3>
+      <img class="justify-self-end w-6" src="./images/icon-instagram.svg" alt="instagram icon">
+      <p class="text-3xl">52k</p>
+      <span class="justify-self-end self-end text-sm text-lime-green"><img class="inline-block" src="./images/icon-up.svg"
+          alt="arrow up">
+        1357%</span>
+    </div>
+
+    <div class="small-card">
+      <h3 class="text-sm text-dark-g-blue">Retweet</h3>
+      <img class="justify-self-end w-6" src="./images/icon-twitter.svg" alt="twitter icon">
+      <p class="text-3xl">117</p>
+      <span class="justify-self-end self-end text-sm text-lime-green"><img class="inline-block" src="./images/icon-up.svg"
+          alt="arrow up">
+        303%</span>
+    </div>
+
+    <div class="small-card">
+      <h3 class="text-sm text-dark-g-blue">Likes</h3>
+      <img class="justify-self-end w-6" src="./images/icon-twitter.svg" alt="twitter icon">
+      <p class="text-3xl">507</p>
+      <span class="justify-self-end self-end text-sm text-lime-green"><img class="inline-block" src="./images/icon-up.svg"
+          alt="arrow up">
+        583%</span>
+    </div>
+
+    <div class="small-card">
+      <h3 class="text-sm text-dark-g-blue">Likes</h3>
+      <img class="justify-self-end w-6" src="./images/icon-youtube.svg" alt="youtube icon">
+      <p class="text-3xl">107</p>
+      <span class="justify-self-end self-end text-sm text-bright-red"><img class="inline-block" src="./images/icon-down.svg"
+          alt="arrow down">
+        19%</span>
+    </div>
+
+    <div class="small-card">
+      <h3 class="text-sm text-dark-g-blue">Total Views</h3>
+      <img class="justify-self-end w-6" src="./images/icon-youtube.svg" alt="youtube icon">
+      <p class="text-3xl">1407</p>
+      <span class="justify-self-end self-end text-sm text-bright-red"><img class="inline-block" src="./images/icon-down.svg"
+          alt="arrow down">
+        12%</span>
+    </div>
+  </section>
+
+  <div class="attribution sr-only">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/prantiknoor">Prantik</a>.
+  </div>
+</body>
+
+</html>
