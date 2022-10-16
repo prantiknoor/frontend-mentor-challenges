@@ -31,12 +31,16 @@
 
     <form class="form flex flex--column" action="#">
       <input type="text" name="first-name" placeholder="First Name" id="first-name" required>
+      <p class="error-msg">First name cannot be empty</p>
       <input type="text" name="first-name" placeholder="Last Name" id="last-name" required>
+      <p class="error-msg">Last name cannot be empty</p>
       <input type="email" name="first-name" placeholder="Email Address" id="email" required>
+      <p class="error-msg">Looks like this is not an email</p>
       <input type="password" name="first-name" placeholder="Password" id="password" required>
+      <p class="error-msg">Password cannot be empty</p>
 
       <button class="button">Claim your free trial</button>
-      
+
       <p class="terms">By clicking the button, you are agreeing to our <b class="text-primary-1">Terms and Services</b>
       </p>
     </form>
